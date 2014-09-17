@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Print Mouse Coordinates</title>
+</head>
+<body>
+	<script type="text/javascript">
+		function printMouseCoordinates(ev){
+			document.body.innerHTML += 'X: ' + ev.pageX + '; Y: ' + ev.pageY + '; Time: ' + new Date() + '</br>';
+		}
+		document.addEventListener('mouseover', printMouseCoordinates, false);
+	</script>
+</body>
+</html>
