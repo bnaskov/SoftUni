@@ -1,0 +1,156 @@
+body, header, section, nav, aside, ul, li, a, article, div, footer, span{
+	margin: 0;
+	padding: 0;	
+	font-family: Tahoma;
+}
+
+body{
+	background-image: url(../images/colorful_dots_on_black.jpg);
+	font-size: 17px;
+}
+
+body>header{
+	font-size:45px;
+	font-weight: bold;
+	color: #FFFF00;
+	text-align: center;
+	padding-bottom: 20px;
+	margin-bottom: 30px;
+	background: linear-gradient(to right, #FF0000, #FF0000 33%, #008000 33%, #008000 67%, #0000FF 67%)
+}
+
+nav{
+	width: 230px;
+	background-color: rgba(255,255,255,0.9);
+	border-radius: 20px;
+	padding:15px;
+	margin-left: 15px;
+	margin-bottom: 15px;		
+	position: fixed;
+}
+	
+	nav header{
+		text-decoration: underline;
+		font-size: 25px;
+		margin-bottom: 5px;
+	}
+
+	nav ul a{		
+		text-decoration:none;
+		color: #000000;
+	}
+
+	nav ul a:visited {
+		color: grey !important;
+	}
+
+	nav ul li{
+		list-style-type: none;
+		padding-top: 5px;
+		padding-bottom: 5px;
+		font-size: 18px;
+	}
+
+	nav ul li:before{
+		content: url(../images/bullet.png);
+		margin-left: 5px;
+		margin-right: 10px;
+		vertical-align: middle;
+	}
+
+	nav ul li:hover{ 
+		border-radius: 10px;
+	}
+
+	nav ul li:nth-child(1):hover{ 
+		background-color: #FF0000;
+	}
+
+	nav ul li:nth-child(2):hover{ 
+		background-color: #FFA500;
+	}
+
+	nav ul li:nth-child(3):hover{ 
+		background-color: #FFFF00;
+	}
+
+	nav ul li:nth-child(4):hover{ 
+		background-color: #008000;
+	}
+
+	nav ul li:nth-child(5):hover{ 
+		background-color: #0000FF;
+	}
+
+	nav ul li:nth-child(6):hover{ 
+		background-color: #800080;
+	}
+
+section{
+	margin-left: 285px;
+	width: 70%;
+}
+
+article{
+	background-color: rgba(255,255,255,0.9);
+	border-radius: 20px;
+	width:100%;
+	margin: 0px 0px 8px 20px;
+	padding: 15px;
+}
+
+	article header{
+		border-radius: 12px;
+		font-size: 30px;		
+		color: #FFFFFF;
+		padding: 10px;
+		margin-bottom: 7px;
+	}
+
+	article div:first-letter{
+		font-size: 55px;
+		font-style: italic;
+	}
+
+	article footer{
+		margin-top: 8px;
+	}
+
+	article footer a{
+		color:grey;
+	}
+
+#webColors{
+	background-color: #FF0000;
+}
+
+#webSafeColors{
+	background-color: #FFA500;
+	color: #000000;
+}
+
+#RGB{
+	background-color: #FFFF00;
+	color: #000000;
+}
+
+#RGBA{
+	background-color: #008000;
+}
+
+#HSLHSV{
+	background-color: #0000FF;
+}
+
+#lorem{
+	background-color: #800080;
+}
+
+span:lang(la){
+	color:#00008B;
+	font-style: italic;
+}
+
+span:lang(la):before, span:lang(la):after{
+	content: "\" ";
+}

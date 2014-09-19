@@ -1,0 +1,76 @@
+body, footer, section, div, h3, ul, li, a{
+	margin:0px;
+	padding: 0px;
+}
+
+footer{
+	background-color: #234465;
+	padding: 30px 10%;
+	font-family: Tahoma;
+	color: #fff;
+	font-size: 13px;
+}
+
+#wrapper{
+	margin: 0 auto;
+}
+
+ul li{
+	list-style: none;
+}
+
+a{
+	color: #F0E8E2;
+	text-decoration: none;
+}
+
+h3{
+	color: #FF9C00;
+	font-size: 14px;
+	margin-bottom: 10px;
+}
+
+.apply, .about, .friends{
+	width: 160px;
+	display: inline-block;
+	vertical-align: top;
+	margin-right: 20px;
+}
+
+.about ul li, .friends ul li{
+	line-height: 23px;
+}
+
+.about ul li a:hover, .friends ul li a:hover{
+	color: #FF9C00;
+}
+
+.soft-uni{
+	width:250px;
+	display: inline-block;
+	vertical-align: top;
+	margin-right: 20px;
+}
+
+.soft-uni ul li{
+	display: inline-block;
+	margin-right: 5px;
+	margin-top: 15px;
+}
+
+.apply a{
+	display: block;
+	text-align: center;
+	padding: 10px;
+	border: 2px solid #FF9C00;
+	margin-bottom: 10px;
+	transition: background-color 1s ease;
+}
+
+.apply a:hover{
+	background-color: #FF9C00;
+}
+
+footer #wrapper .soft-uni ul li a:hover {
+	opacity: 0.5;
+}

@@ -1,0 +1,93 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">        
+        <title>Calculator</title>
+        <link href="styles/Pr7-Calculator.css" rel="stylesheet"/>
+    </head>
+    <body>
+        <table>
+            <thead>
+                <tr>
+                    <td colspan="4">
+                        <input type="text" readonly id="display" placeholder="0">
+                    </td>
+                </tr>
+            </thead>
+            <tbody class="button">
+                <tr>
+                    <td>
+                        <input type="button" onclick='v("1")' value="1"/>
+                    </td>
+                    <td>
+                        <input type="button" onclick='v("2")' value="2"/>
+                    </td>
+                    <td>
+                        <input type="button" onclick='v("3")' value="3"/>
+                    </td>
+                    <td>
+                        <input type="button" onclick='v("+")' value="+"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="button" onclick='v("4")' value="4"/>
+                    </td>
+                    <td>
+                        <input type="button" onclick='v("5")' value="5"/>
+                    </td>
+                    <td>
+                        <input type="button" onclick='v("6")' value="6"/>
+                    </td>
+                    <td>
+                        <input type="button" onclick='v("-")' value="-"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="button" onclick='v("7")' value="7"/>
+                    </td>
+                    <td>
+                        <input type="button" onclick='v("8")' value="8"/>
+                    </td>
+                    <td>
+                        <input type="button" onclick='v("9")' value="9"/>
+                    </td>
+                    <td>
+                        <input type="button" onclick='v("*")' value="*"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="button" onclick='c("")' value="C"/>
+                    </td>
+                    <td>
+                        <input type="button" onclick='v("0")' value="0"/>
+                    </td>
+                    <td>
+                        <input type="button" onclick='e()' value="="/>
+                    </td>
+                    <td>
+                        <input type="button" onclick='v("/")' value="/"/>
+                    </td>
+                </tr>
+            </tbody>
+            <script>
+                function c(val) {
+                    document.getElementById("display").value=val;
+                }
+                function v(val) {
+                    document.getElementById("display").value+=val;
+                }
+                function e() { 
+                    try { 
+                        c(eval(document.getElementById("display").value));
+                    } 
+                    catch(e) {
+                        c('Error');
+                    } 
+                }  
+            </script>
+        </table>
+    </body>
+</html>

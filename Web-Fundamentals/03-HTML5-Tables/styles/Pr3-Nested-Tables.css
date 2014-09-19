@@ -1,0 +1,13 @@
+﻿body {
+    font-family: Tahoma;    
+    font-size:60px;
+}
+
+table, td {
+    border: solid;
+    border-width: 1px;
+}
+
+    table td{
+        padding:10px;
+    }

@@ -1,0 +1,43 @@
+﻿div {
+    background-color: #ffc0cb;
+    width:310px;
+}
+
+h1{
+    text-align:center;
+    padding-top:10px;
+    margin:0px;
+}
+
+label {
+    font-style: italic;
+    display: inline-block;
+    font-size: 13px;
+    padding-left: 5px;
+}
+
+select {
+    height: 23px;
+}
+
+button {
+    border: 1px solid #cac9ca;
+    background-color: #ececec;
+    height: 25px;
+}
+
+.large {
+    width: 140px;
+}
+
+.medium {
+    width: 64px;
+}
+
+.small {
+    width: 41px;
+}
+
+td{
+    padding-bottom:0px;
+}

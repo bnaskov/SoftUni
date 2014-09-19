@@ -1,0 +1,67 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8" />
+    <title>Fakebook Registration Form</title>
+    <link href="styles/Pr4-Fakebook-Register-Form.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="container">
+        <h1><a href="http://fakebook.com">fakebook</a>&reg;</h1>
+        <h2>Registration</h2>
+        <h3>It is safe and it will always be!</h3>
+        <form method="post" action="/">
+            <div id="none-imp-info">
+                <fieldset class="left-field">
+                    <legend>None-Important Information</legend>
+                    <input type="text" name="firstName" placeholder="First Name" value="" class="large"/>
+                    <input type="text" name="lastName" placeholder="Last Name" value="" class="large" />
+                    <input type="email" name="email" placeholder="Your Email" pattern="^[a-za-z0-9]+[\._a-za-z0-9-]+@([a-za-z0-9]+[-\.]?[a-za-z0-9]+)+(\.[a-za-z0-9]+[-\.]?[a-za-z0-9]+)*(\.[a-za-z]{2,})$" value="" class="large" />
+                    <input type="text" name="phoneNumber" placeholder="Phone Number" value="" class="large" />
+                    <input type="password" name="password" placeholder="Your Password" value="" class="large" />
+                    <input type="text" name="website" placeholder="Website" value="" class="large" />
+                    <label for="birthday">Birthday</label><br/>
+                    <input name="birthday" type="date" id="birthday"/><br/>
+                    <input type="radio" name="sex" value="1" id="female"/>
+                    <label for="female">Female</label>
+                    <input type="radio" name="sex" value="2" id="male" />
+                    <label for="male">Male</label>
+                    <input type="radio" name="sex" value="3" id="other" checked/>
+                    <label for="other">Other</label>
+                </fieldset>
+                <input type="reset" value="Clear Form" class="res-btn"/>
+            </div>
+            <div id="imp-info">
+                <fieldset class="right-field">
+                    <legend>Important Information *required</legend>
+                    <select name="country" required class="large">
+                        <option disabled selected value="">Country</option>
+                        <option value="1">Bulgaria</option>
+                        <option value="2">Greece</option>
+                        <option value="3">Romania</option>
+                    </select>
+                    <input type="text" name="village" placeholder="Village" required value="" class="large" />
+                    <input type="text" name="district" placeholder="District" required value="" class="large" />
+                    <input type="text" name="street" placeholder="Street" required value="" class="large" />
+                    <input type="text" name="str-number" placeholder="Nr" required value="" class="small" />
+                    <input type="text" name="floor" placeholder="Floor" required value="" class="small" />
+                    <input type="text" name="ap-number" placeholder="Ap Nr" required value="" class="small" /><br />
+                    <label for="door-color">Door Color</label><br />
+                    <input name="door-color" type="color" id="door-color" value="#FF80C0" class="large" />
+                    <input type="text" name="water-meter-nr" placeholder="Water Meter Nr" required value="" class="large" />
+                    <select name="aunt-pnt-size" required class="large">
+                        <option disabled selected value="">Aunt Panties' Size</option>
+                        <option value="1">M</option>
+                        <option value="2">L</option>
+                        <option value="3">XL</option>
+                        <option value="3">XXL</option>
+                    </select><br />
+                    <label for="more-personal-info">More Personal Information</label><br />
+                    <textarea name="more-personal-info" id="more-personal-info" placeholder="Give Us More Information!!!" required></textarea>
+                </fieldset>
+                <input type="submit" value="Register" class="submit-btn"/>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

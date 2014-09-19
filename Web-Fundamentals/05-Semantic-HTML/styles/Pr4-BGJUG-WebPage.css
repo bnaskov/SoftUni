@@ -1,0 +1,124 @@
+body, header, h1, h2, h3, h4, a, ul, select, option, article, p, hr, div {
+	margin:0px;
+	padding: 0px;
+}
+
+#inner{
+	width: 945px;
+	margin:0 auto;
+	font-family: Calibri;
+	font-size: 17px;
+}
+
+h1{
+	margin: 15px 0px 55px 25px;
+}
+
+.gray{
+	color:#777777;
+}
+
+a{
+	text-decoration: none;
+}
+
+a:hover{
+	text-decoration: underline;
+}
+
+nav a{
+	color: #777777;
+}
+
+hr{
+	margin-top: 10px;
+}
+
+ul {
+	list-style-type: none; 
+}
+
+.nav{
+	display: inline-block;
+	margin-left: 10px;
+	margin-right: 50px
+}
+
+input[type="text"]{
+	float: right;
+	margin-right: 0px;
+}
+
+section, aside{
+	display: inline-block;
+	vertical-align: top;
+	margin-top: 20px;
+}
+
+section{
+	width:492px;
+	margin-left: 20px;
+	margin-right: 20px;
+}
+	h2{
+		margin-bottom: 15px;
+	}
+
+	p{
+		margin-bottom: 15px;
+	}
+
+	article{
+		margin-bottom: 15px;
+	}
+		article h2 a{
+			color:#000000;
+		}
+
+	.prev-entr{
+		margin-bottom: 40px;
+	}
+
+aside{
+	width:202px;
+}
+
+	aside li{
+		margin-top: 10px;
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+
+	aside .aside{
+		margin:10px;
+	}
+
+	select{
+		margin-top: 10px;
+		margin-bottom: 20px;
+	}
+
+footer{
+	background-color: #000000;
+	color: #FFFFFF;
+}
+
+	footer div ul li a, footer div a{
+		color: #FFFFFF;
+	}
+
+	footer p{
+		color: #777777;
+	}
+
+	footer div h4{
+		margin-bottom: 5px;
+	}
+	
+	.footer{
+		width:16%;
+		margin-top: 20px;
+		margin-left: 3%;
+		display: inline-block;
+		vertical-align: top;
+	}

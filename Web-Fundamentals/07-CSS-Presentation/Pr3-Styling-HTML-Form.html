@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Styling a HTML Form</title>
+	<link rel="stylesheet" type="text/css" href="styles/Pr3-Styling-HTML-Form.css">
+</head>
+<body>
+<div class="container">
+	<form method="post" action="/">
+		<section>
+			<h2>Step 1: Your details</h2>
+			<div>
+				<label for="name">Name</label>
+				<input type="text" name="name" id="name" placeholder="First and last name" required>
+			</div>
+			<div>
+				<label for="email">Email</label>
+				<input type="email" name="email" id="email" placeholder="example@domain.com" pattern="^[a-za-z0-9]+[\._a-za-z0-9-]+@([a-za-z0-9]+[-\.]?[a-za-z0-9]+)+(\.[a-za-z0-9]+[-\.]?[a-za-z0-9]+)*(\.[a-za-z]{2,})$" required>
+			</div>
+			<div>
+				<label for="phone">Phone</label>
+				<input type="text" name="phone" id="phone" placeholder="eg. +4475000000000" required>
+			</div>
+			<h2>Step 2: Devivery address</h2>
+			<div>
+				<label class="address" for="address">Address</label>
+				<textarea name="address" id="address" required></textarea>
+			</div>
+			<div>
+				<label for="post-code">Post Code</label>
+				<input type="text" name="post-code" id="post-code" required>
+			</div>
+			<div>
+				<label for="country">Country</label>
+				<input type="text" name="country" id="country" required>
+			</div>
+			<h2>Step 3: Card type</h2>
+			<div>
+				<p>Card type</p>
+				<input type="radio" name="card-type" value="1" id="visa"/>
+                <label class="card-type" for="visa">VISA</label>
+                <input type="radio" name="card-type" value="2" id="amex" />
+                <label class="card-type" for="amex">AmEx</label>
+                <input type="radio" name="card-type" value="3" id="mastercard" />
+                <label class="card-type" for="mastercard">Mastercard</label>
+			</div>
+			<div>
+				<label for="card-number">Card Number</label>
+				<input type="text" name="card-number" id="card-number" required>
+			</div>
+			<div>
+				<label for="security-code">Security code</label>
+				<input type="text" name="security-code" id="security-code" required>
+			</div>
+			<div>
+				<label for="name-on-card">Name on card</label>
+				<input type="text" name="name-on-card" id="name-on-card" required>
+			</div>
+				<input type="submit" value="BUY IT!" class="submit-btn"/>
+	</section>	
+	</form>
+</div>
+</body>
+</html>

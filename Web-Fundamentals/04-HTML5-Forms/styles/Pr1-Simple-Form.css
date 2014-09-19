@@ -1,0 +1,104 @@
+﻿#wrapper{
+    background-color:#EEEEEE;
+    color:#234465;
+    font-family:Calibri;
+    padding:5px;
+    width:530px;
+    height:320px;
+}
+
+h1{
+    padding-left:7px;
+    margin-top:5px;
+    margin-bottom:10px;
+}
+
+body section div p{
+    margin-top:5px;
+}
+
+.text-under-h1{
+    padding:5px;
+    margin-bottom:10px;
+    color:grey;
+}
+
+#leftRect {
+    display:inline-block;
+    vertical-align:top;
+    padding:10px;
+    width:240px;
+    height:205px;
+}
+
+#rightRect {
+    display:inline-block;
+    color:#FFFFFF;
+    background-color:#234465;
+    vertical-align:top;
+    padding:10px;
+    width:240px;
+    height:205px;
+}
+
+.reg {
+    text-align:center;
+    float:right;
+    font-family:Calibri;
+    font-size:15px;
+    border:2px solid #234465;
+    color:#234465;
+    background-color:#EEEEEE;
+    height:30px;
+    width:100px;
+}
+
+.reg:hover{
+    border:none;
+    background-color:#234465;
+    color:#FFFFFF;
+}
+
+.login {
+    text-align:center;
+    float:right;
+    margin-top:5px;
+    font-family:Calibri;
+    font-size:15px;
+    border: 2px solid #FF9C00;
+    color:#FFFFFF;
+    background-color:#234465;
+    height:30px;
+    width:100px;
+    display:inline-block;
+}
+
+.login:hover{
+    border:none;
+    background-color:#FF9C00;
+}
+
+body section div div form label{
+    font-size:12px;
+    vertical-align:top;
+}
+
+body section div p a {
+    margin-right:5px;
+    color:#FFFFFF;
+    font-size: 11px;
+    float:right;
+}
+
+.text-field{
+    width:96%;
+    font-size:12px;
+    padding:3px;
+    margin-bottom:9px;
+}
+
+body section div div p span{
+    color:grey;
+    font-size:inherit;
+}
+

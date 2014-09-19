@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Simple Form</title>
+    <link href="styles/Pr1-Simple-Form.css" rel="stylesheet" />
+</head>
+<body>
+    <section>
+        <div id="wrapper">
+            <h1>Enter the system</h1>
+            <p class="text-under-h1">It is necessary to login in Your account in order to sign in for a course.</p>
+            <div id="leftRect">
+                <p><span class="grey">ARE YOU NEW?</span> REGISTER</p>
+                <form action="/" method="post">
+                    <input type="text" name="userName" placeholder="User Name" class="text-field" value="" required/>
+                    <input type="email" name="email" placeholder="Email" pattern="^[a-za-z0-9]+[\._a-za-z0-9-]+@([a-za-z0-9]+[-\.]?[a-za-z0-9]+)+(\.[a-za-z0-9]+[-\.]?[a-za-z0-9]+)*(\.[a-za-z]{2,})$" class="text-field" value="" required />
+                    <input type="password" name="password" placeholder="Password" class="text-field" value="" required />
+                    <input type="password" name="confirmPassword" placeholder="Confirm Password" class="text-field" value="" required />
+                    <input type="submit" class="reg" value="Register">
+                </form>
+            </div>
+            <div id="rightRect">
+                <p>ALREADY A STUDENT? LOGIN</p>
+                <form action="/" method="post">
+                    <input type="text" name="userName" placeholder="User Name" class="text-field" value="" required />
+                    <input type="password" name="password" placeholder="Password" class="text-field" value="" required />
+                    <input type="checkbox" name="rememberMe" id="remember-me" value="">
+                    <label for="remember-me">Remember me</label>
+                    <input type="submit" value="Login" class="login">                                     
+                </form>
+                <br>
+                <p><a href="#" name="forgot-password">Forgot Password</a></p>                             
+            </div>
+        </div>
+    </section>
+</body>
+</html>
