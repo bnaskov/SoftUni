@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Express 2013 for Windows Desktop
+VisualStudioVersion = 12.0.30501.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02-Enter-Numbers", "02-Exception-Handling\02-Enter-Numbers.csproj", "{02149CB8-5DBB-4AF3-B11E-601979781B64}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01-Square-Root", "01-Square-Root\01-Square-Root.csproj", "{C6896390-9925-4628-A4CC-1D1E36F727A8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{02149CB8-5DBB-4AF3-B11E-601979781B64}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{02149CB8-5DBB-4AF3-B11E-601979781B64}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{02149CB8-5DBB-4AF3-B11E-601979781B64}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{02149CB8-5DBB-4AF3-B11E-601979781B64}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C6896390-9925-4628-A4CC-1D1E36F727A8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C6896390-9925-4628-A4CC-1D1E36F727A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C6896390-9925-4628-A4CC-1D1E36F727A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C6896390-9925-4628-A4CC-1D1E36F727A8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

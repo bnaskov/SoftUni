@@ -1,0 +1,5 @@
+D:\CSharp-Projects\02-Exception-Handling\temp\bin\Debug\temp.exe.config
+D:\CSharp-Projects\02-Exception-Handling\temp\bin\Debug\temp.exe
+D:\CSharp-Projects\02-Exception-Handling\temp\bin\Debug\temp.pdb
+D:\CSharp-Projects\02-Exception-Handling\temp\obj\Debug\temp.exe
+D:\CSharp-Projects\02-Exception-Handling\temp\obj\Debug\temp.pdb
