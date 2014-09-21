@@ -1,0 +1,5 @@
+D:\CSharp-Projects\01-Defining-Classes\03-PC-Catalog\bin\Debug\03-PC-Catalog.exe.config
+D:\CSharp-Projects\01-Defining-Classes\03-PC-Catalog\bin\Debug\03-PC-Catalog.exe
+D:\CSharp-Projects\01-Defining-Classes\03-PC-Catalog\bin\Debug\03-PC-Catalog.pdb
+D:\CSharp-Projects\01-Defining-Classes\03-PC-Catalog\obj\Debug\03-PC-Catalog.exe
+D:\CSharp-Projects\01-Defining-Classes\03-PC-Catalog\obj\Debug\03-PC-Catalog.pdb

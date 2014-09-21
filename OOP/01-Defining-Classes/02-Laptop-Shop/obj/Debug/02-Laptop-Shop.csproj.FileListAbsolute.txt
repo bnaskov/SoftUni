@@ -1,0 +1,5 @@
+D:\CSharp-Projects\01-Defining-Classes\02-Laptop-Shop\bin\Debug\02-Laptop-Shop.exe.config
+D:\CSharp-Projects\01-Defining-Classes\02-Laptop-Shop\bin\Debug\02-Laptop-Shop.exe
+D:\CSharp-Projects\01-Defining-Classes\02-Laptop-Shop\bin\Debug\02-Laptop-Shop.pdb
+D:\CSharp-Projects\01-Defining-Classes\02-Laptop-Shop\obj\Debug\02-Laptop-Shop.exe
+D:\CSharp-Projects\01-Defining-Classes\02-Laptop-Shop\obj\Debug\02-Laptop-Shop.pdb

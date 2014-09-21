@@ -1,0 +1,6 @@
+D:\CSharp-Projects\01-Defining-Classes\01-Persons\bin\Debug\01-Persons.exe.config
+D:\CSharp-Projects\01-Defining-Classes\01-Persons\bin\Debug\01-Persons.exe
+D:\CSharp-Projects\01-Defining-Classes\01-Persons\bin\Debug\01-Persons.pdb
+D:\CSharp-Projects\01-Defining-Classes\01-Persons\obj\Debug\01-Persons.csprojResolveAssemblyReference.cache
+D:\CSharp-Projects\01-Defining-Classes\01-Persons\obj\Debug\01-Persons.exe
+D:\CSharp-Projects\01-Defining-Classes\01-Persons\obj\Debug\01-Persons.pdb
