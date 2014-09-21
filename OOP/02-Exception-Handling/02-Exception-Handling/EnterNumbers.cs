@@ -15,8 +15,8 @@ class EnterNumbers
 
     private static int ReadNumber(int start, int end)
     {
-        int num = 0;
-        int tempNum = 0;
+        int num = start;
+        int tempNum = start;
         while (tempNum == num)
         {
             try

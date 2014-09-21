@@ -3,3 +3,4 @@ D:\CSharp-Projects\02-Exception-Handling\02-Exception-Handling\obj\Debug\02-Exce
 D:\CSharp-Projects\02-Exception-Handling\02-Exception-Handling\obj\Debug\02-Exception-Handling.pdb
 D:\CSharp-Projects\02-Exception-Handling\02-Exception-Handling\bin\Debug\02-Exception-Handling.exe
 D:\CSharp-Projects\02-Exception-Handling\02-Exception-Handling\bin\Debug\02-Exception-Handling.pdb
+D:\CSharp-Projects\02-Exception-Handling\02-Exception-Handling\obj\Debug\02-Enter-Numbers.csprojResolveAssemblyReference.cache
