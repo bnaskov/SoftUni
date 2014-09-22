@@ -6,40 +6,44 @@ class EnterNumbers
     {
         int start = 1;
         int end = 100;
+        int counter = 0;
+        int num = 0;
+        int[] numbers = new int[10];
 
-        for (int i = 0; i < 10; i++)
-        {
-            start = ReadNumber(start, end);
-        }
-    }
-
-    private static int ReadNumber(int start, int end)
-    {
-        int num = start;
-        int tempNum = start;
-        while (tempNum == num)
+        while (counter < 10)
         {
             try
             {
-                Console.WriteLine("Enter a number between {0} and {1}: ", start, end);
-                num = int.Parse(Console.ReadLine());
-                while (num <= start || num >= end)
-                {
-                    Console.WriteLine("Invalid input! Your number must be between {0} and {1}!", start, end);
-                    Console.WriteLine("Enter a number between {0} and {1}: ", start, end);
-                    num = int.Parse(Console.ReadLine());
-                }
+                num = ReadNumbers(start, end);
+                start = num;
+                numbers[counter] = num;
+                counter++;
             }
             catch (FormatException)
-            {
+            {                
                 Console.WriteLine("Invalid Number!");
             }
             catch (OverflowException)
             {
                 Console.WriteLine("Invalid number! The number is too big to fit in int32!");
             }
+            catch (ArgumentException)
+            {
+                Console.WriteLine("The number is not in the requested range!");
+            }
         }
-        
+    }
+
+    public static int ReadNumbers(int start, int end)
+    {
+        Console.WriteLine("Enter a number between {0} and {1}: ", start, end);
+        int num = int.Parse(Console.ReadLine());
+
+        if (num <= start || num > end)
+        {
+            throw new ArgumentException("The number is not in the requested range!");
+        }
+
         return num;
     }
 }
