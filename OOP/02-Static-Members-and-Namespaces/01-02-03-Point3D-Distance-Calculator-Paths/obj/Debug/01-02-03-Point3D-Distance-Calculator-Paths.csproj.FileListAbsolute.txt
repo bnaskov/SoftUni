@@ -1,0 +1,5 @@
+D:\CSharp-Projects\02-Static-Members-and-Namespaces\01-02-03-Point3D-Distance-Calculator-Paths\bin\Debug\01-02-03-Point3D-Distance-Calculator-Paths.exe.config
+D:\CSharp-Projects\02-Static-Members-and-Namespaces\01-02-03-Point3D-Distance-Calculator-Paths\bin\Debug\01-02-03-Point3D-Distance-Calculator-Paths.exe
+D:\CSharp-Projects\02-Static-Members-and-Namespaces\01-02-03-Point3D-Distance-Calculator-Paths\bin\Debug\01-02-03-Point3D-Distance-Calculator-Paths.pdb
+D:\CSharp-Projects\02-Static-Members-and-Namespaces\01-02-03-Point3D-Distance-Calculator-Paths\obj\Debug\01-02-03-Point3D-Distance-Calculator-Paths.exe
+D:\CSharp-Projects\02-Static-Members-and-Namespaces\01-02-03-Point3D-Distance-Calculator-Paths\obj\Debug\01-02-03-Point3D-Distance-Calculator-Paths.pdb

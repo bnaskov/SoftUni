@@ -1,0 +1,6 @@
+D:\CSharp-Projects\02-Static-Members-and-Namespaces\Geometry\bin\Debug\Geometry.exe.config
+D:\CSharp-Projects\02-Static-Members-and-Namespaces\Geometry\bin\Debug\Geometry.exe
+D:\CSharp-Projects\02-Static-Members-and-Namespaces\Geometry\bin\Debug\Geometry.pdb
+D:\CSharp-Projects\02-Static-Members-and-Namespaces\Geometry\obj\Debug\Geometry.csprojResolveAssemblyReference.cache
+D:\CSharp-Projects\02-Static-Members-and-Namespaces\Geometry\obj\Debug\Geometry.exe
+D:\CSharp-Projects\02-Static-Members-and-Namespaces\Geometry\obj\Debug\Geometry.pdb

@@ -1,0 +1,6 @@
+D:\CSharp-Projects\02-Static-Members-and-Namespaces\05-BitArray\obj\Debug\05-BitArray.csprojResolveAssemblyReference.cache
+D:\CSharp-Projects\02-Static-Members-and-Namespaces\05-BitArray\bin\Debug\05-BitArray.exe.config
+D:\CSharp-Projects\02-Static-Members-and-Namespaces\05-BitArray\bin\Debug\05-BitArray.exe
+D:\CSharp-Projects\02-Static-Members-and-Namespaces\05-BitArray\bin\Debug\05-BitArray.pdb
+D:\CSharp-Projects\02-Static-Members-and-Namespaces\05-BitArray\obj\Debug\05-BitArray.exe
+D:\CSharp-Projects\02-Static-Members-and-Namespaces\05-BitArray\obj\Debug\05-BitArray.pdb
