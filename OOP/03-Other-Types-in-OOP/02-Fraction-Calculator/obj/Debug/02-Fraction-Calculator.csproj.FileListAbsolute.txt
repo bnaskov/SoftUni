@@ -1,0 +1,5 @@
+D:\CSharp-Projects\03-Other-Types-in-OOP\02-Fraction-Calculator\bin\Debug\02-Fraction-Calculator.exe.config
+D:\CSharp-Projects\03-Other-Types-in-OOP\02-Fraction-Calculator\bin\Debug\02-Fraction-Calculator.exe
+D:\CSharp-Projects\03-Other-Types-in-OOP\02-Fraction-Calculator\bin\Debug\02-Fraction-Calculator.pdb
+D:\CSharp-Projects\03-Other-Types-in-OOP\02-Fraction-Calculator\obj\Debug\02-Fraction-Calculator.exe
+D:\CSharp-Projects\03-Other-Types-in-OOP\02-Fraction-Calculator\obj\Debug\02-Fraction-Calculator.pdb
