@@ -23,10 +23,6 @@ class EnterNumbers
             {                
                 Console.WriteLine("Invalid Number!");
             }
-            catch (OverflowException)
-            {
-                Console.WriteLine("Invalid number! The number is too big to fit in int32!");
-            }
             catch (ArgumentException)
             {
                 Console.WriteLine("The number is not in the requested range!");
@@ -39,7 +35,7 @@ class EnterNumbers
         Console.WriteLine("Enter a number between {0} and {1}: ", start, end);
         int num = int.Parse(Console.ReadLine());
 
-        if (num <= start || num > end)
+        if (num <= start || num >= end)
         {
             throw new ArgumentException("The number is not in the requested range!");
         }
