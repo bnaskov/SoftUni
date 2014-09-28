@@ -1,0 +1,5 @@
+D:\CSharp-Projects\03-Delegates-and-Events\03-StudentClass\bin\Debug\03-StudentClass.exe.config
+D:\CSharp-Projects\03-Delegates-and-Events\03-StudentClass\bin\Debug\03-StudentClass.exe
+D:\CSharp-Projects\03-Delegates-and-Events\03-StudentClass\bin\Debug\03-StudentClass.pdb
+D:\CSharp-Projects\03-Delegates-and-Events\03-StudentClass\obj\Debug\03-StudentClass.exe
+D:\CSharp-Projects\03-Delegates-and-Events\03-StudentClass\obj\Debug\03-StudentClass.pdb

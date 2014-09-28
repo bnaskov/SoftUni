@@ -1,0 +1,6 @@
+D:\CSharp-Projects\03-Delegates-and-Events\01-Interest-Calculator\bin\Debug\01-Interest-Calculator.exe.config
+D:\CSharp-Projects\03-Delegates-and-Events\01-Interest-Calculator\obj\Debug\01-Interest-Calculator.csprojResolveAssemblyReference.cache
+D:\CSharp-Projects\03-Delegates-and-Events\01-Interest-Calculator\bin\Debug\01-Interest-Calculator.exe
+D:\CSharp-Projects\03-Delegates-and-Events\01-Interest-Calculator\bin\Debug\01-Interest-Calculator.pdb
+D:\CSharp-Projects\03-Delegates-and-Events\01-Interest-Calculator\obj\Debug\01-Interest-Calculator.exe
+D:\CSharp-Projects\03-Delegates-and-Events\01-Interest-Calculator\obj\Debug\01-Interest-Calculator.pdb
