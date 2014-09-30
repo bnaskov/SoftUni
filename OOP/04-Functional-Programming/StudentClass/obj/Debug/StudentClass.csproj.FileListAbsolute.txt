@@ -1,0 +1,6 @@
+D:\CSharp-Projects\04-Functional-Programming\StudentClass\bin\Debug\StudentClass.exe.config
+D:\CSharp-Projects\04-Functional-Programming\StudentClass\bin\Debug\StudentClass.exe
+D:\CSharp-Projects\04-Functional-Programming\StudentClass\bin\Debug\StudentClass.pdb
+D:\CSharp-Projects\04-Functional-Programming\StudentClass\obj\Debug\StudentClass.csprojResolveAssemblyReference.cache
+D:\CSharp-Projects\04-Functional-Programming\StudentClass\obj\Debug\StudentClass.exe
+D:\CSharp-Projects\04-Functional-Programming\StudentClass\obj\Debug\StudentClass.pdb

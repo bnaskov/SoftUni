@@ -1,0 +1,6 @@
+D:\CSharp-Projects\04-Functional-Programming\02-CustomLINQExtensionMethods\obj\Debug\02-CustomLINQExtensionMethods.csprojResolveAssemblyReference.cache
+D:\CSharp-Projects\04-Functional-Programming\02-CustomLINQExtensionMethods\bin\Debug\02-CustomLINQExtensionMethods.exe.config
+D:\CSharp-Projects\04-Functional-Programming\02-CustomLINQExtensionMethods\bin\Debug\02-CustomLINQExtensionMethods.exe
+D:\CSharp-Projects\04-Functional-Programming\02-CustomLINQExtensionMethods\bin\Debug\02-CustomLINQExtensionMethods.pdb
+D:\CSharp-Projects\04-Functional-Programming\02-CustomLINQExtensionMethods\obj\Debug\02-CustomLINQExtensionMethods.exe
+D:\CSharp-Projects\04-Functional-Programming\02-CustomLINQExtensionMethods\obj\Debug\02-CustomLINQExtensionMethods.pdb
