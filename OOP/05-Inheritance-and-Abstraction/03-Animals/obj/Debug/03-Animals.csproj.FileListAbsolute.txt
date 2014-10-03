@@ -1,0 +1,6 @@
+D:\CSharp-Projects\05-Inheritance-and-Abstraction\03-Animals\bin\Debug\03-Animals.exe.config
+D:\CSharp-Projects\05-Inheritance-and-Abstraction\03-Animals\obj\Debug\03-Animals.csprojResolveAssemblyReference.cache
+D:\CSharp-Projects\05-Inheritance-and-Abstraction\03-Animals\bin\Debug\03-Animals.exe
+D:\CSharp-Projects\05-Inheritance-and-Abstraction\03-Animals\bin\Debug\03-Animals.pdb
+D:\CSharp-Projects\05-Inheritance-and-Abstraction\03-Animals\obj\Debug\03-Animals.exe
+D:\CSharp-Projects\05-Inheritance-and-Abstraction\03-Animals\obj\Debug\03-Animals.pdb
