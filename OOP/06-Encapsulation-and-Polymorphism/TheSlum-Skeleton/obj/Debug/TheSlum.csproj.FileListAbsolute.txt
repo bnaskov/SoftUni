@@ -1,0 +1,7 @@
+C:\Users\WIN8\Desktop\TheSlum-Skeleton\bin\Debug\TheSlum.exe
+C:\Users\WIN8\Desktop\TheSlum-Skeleton\bin\Debug\TheSlum.pdb
+C:\Users\WIN8\Desktop\TheSlum-Skeleton\obj\Debug\TheSlum.csprojResolveAssemblyReference.cache
+C:\Users\WIN8\Desktop\TheSlum-Skeleton\obj\Debug\TheSlum.exe
+C:\Users\WIN8\Desktop\TheSlum-Skeleton\obj\Debug\TheSlum.pdb
+D:\CSharp-Projects\06-Encapsulation-and-Polymorphism\TheSlum-Skeleton\obj\Debug\TheSlum.exe
+D:\CSharp-Projects\06-Encapsulation-and-Polymorphism\TheSlum-Skeleton\obj\Debug\TheSlum.pdb
