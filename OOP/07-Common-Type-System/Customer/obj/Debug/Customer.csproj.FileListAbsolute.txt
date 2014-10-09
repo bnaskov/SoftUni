@@ -1,0 +1,6 @@
+D:\CSharp-Projects\07-Common-Type-System\Customer\bin\Debug\Customer.exe.config
+D:\CSharp-Projects\07-Common-Type-System\Customer\bin\Debug\Customer.exe
+D:\CSharp-Projects\07-Common-Type-System\Customer\bin\Debug\Customer.pdb
+D:\CSharp-Projects\07-Common-Type-System\Customer\obj\Debug\Customer.csprojResolveAssemblyReference.cache
+D:\CSharp-Projects\07-Common-Type-System\Customer\obj\Debug\Customer.exe
+D:\CSharp-Projects\07-Common-Type-System\Customer\obj\Debug\Customer.pdb
