@@ -1,14 +1,12 @@
 package oneLvShop;
 
-import java.math.BigDecimal;
-
 public abstract class Product implements Buyable {
 	private String name;
-	private BigDecimal price;
+	private double price;
 	private int quantity;
 	private AgeRestriction ageRestriction;
 
-	public Product(String name, BigDecimal price, int quantity,
+	public Product(String name, double price, int quantity,
 			AgeRestriction ageRestriction) {
 		super();
 		this.setName(name);
@@ -28,12 +26,12 @@ public abstract class Product implements Buyable {
 		this.name = name;
 	}
 
-	public BigDecimal getPrice() {
+	public double getPrice() {
 		return price;
 	}
 
-	private void setPrice(BigDecimal price) {
-		if (price.compareTo(new BigDecimal(0.0)) == -1) {
+	protected void setPrice(double price) {
+		if (price < 0) {
 			throw new IllegalArgumentException("Price cannot be negative.");
 		}
 
@@ -44,7 +42,7 @@ public abstract class Product implements Buyable {
 		return quantity;
 	}
 
-	private void setQuantity(int quantity) {
+	protected void setQuantity(int quantity) {
 		if (quantity < 0) {
 			throw new IllegalArgumentException("Quantity cannot be negative.");
 		}
