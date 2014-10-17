@@ -8,38 +8,73 @@ import java.util.concurrent.TimeUnit;
 
 public class FoodProduct extends Product implements Expirable {
 	private Date expirationDate;
+	private boolean hasExpired;
+	private long daysUntilExpiry;
 
 	public FoodProduct(String name, double price, int quantity,
-			AgeRestriction ageRestriction, String expirationDate)
-			throws ParseException {
-		super(name, price, quantity, ageRestriction);
+			AgeRestriction ageRestrictionLevel, String expirationDate) {
+		super(name, price, quantity, ageRestrictionLevel);
 
-		this.setExpirationDate(expirationDate);
-		isExpirated();
+		SimpleDateFormat simpleFormat = (SimpleDateFormat) DateFormat
+				.getDateInstance();
+		simpleFormat.applyPattern("yyyy-MM-dd");
+
+		try {
+			this.expirationDate = simpleFormat.parse(expirationDate);
+		} catch (ParseException e) {
+			throw new IllegalArgumentException("not a valid date");
+		}
+
+		checkIfExpired();
 	}
 
 	@Override
+	public double getPrice() {
+		if (this.daysUntilExpiry < 15) {
+			return this.price * 0.7;
+		}
+
+		return this.price;
+	}
+
+	@Override
+	public String toString() {
+		return super.toString() + "Expiration date: "
+				+ this.expirationDate.toString();
+	}
+
+	private void checkIfExpired() {
+		Date now = new Date();
+		long diff = this.expirationDate.getTime() - now.getTime();
+
+		long days = TimeUnit.DAYS.convert(diff, TimeUnit.MILLISECONDS);
+
+		if (days < 1) {
+			this.hasExpired = true;
+		} else {
+			this.hasExpired = false;
+		}
+
+		this.daysUntilExpiry = days;
+	}
+
 	public Date getExpirationDate() {
 		return this.expirationDate;
 	}
 
-	public void setExpirationDate(String expirationDate) throws ParseException {
-		String target = expirationDate;
-		DateFormat formatter = new SimpleDateFormat("dd-MM-yyyy");
-		Date date = formatter.parse(target);
-		this.expirationDate = date;
+	public boolean isExpired() {
+		return this.hasExpired;
 	}
 
-	public boolean isExpirated() {
-		long now = new Date().getTime();
-		long period = (this.getExpirationDate().getTime() - now);
-		int days = (int) TimeUnit.DAYS.convert(period, TimeUnit.MILLISECONDS);
-		if (days < 15) {
-			this.setPrice(this.getPrice() * 0.7);
-			return true;
-		}
-
-		return false;
+	public void setHasExpired(boolean hasExpired) {
+		this.hasExpired = hasExpired;
 	}
 
+	public long getDaysUntilExpiry() {
+		return this.daysUntilExpiry;
+	}
+
+	public void setDaysUntilExpiry(long daysUntilExpiry) {
+		this.daysUntilExpiry = daysUntilExpiry;
+	}
 }

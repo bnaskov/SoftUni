@@ -1,26 +1,35 @@
 package oneLvShop;
 
+import oneLvShop.customexceptions.CustomerNoPermissionToBuyException;
+import oneLvShop.customexceptions.CustomerinsufficientBalanceException;
+import oneLvShop.customexceptions.ProductHasExpiredException;
+import oneLvShop.customexceptions.ProductManagementException;
+import oneLvShop.customexceptions.ProductOutOfStockException;
+
 public final class PurchaseManager {
 
-	public static void ProcessPurchase(Customer customer, Product product) {
-		double newBalance = customer.getBalance() - product.getPrice();
-		customer.setBalance(newBalance);
-		int newQuantity = product.getQuantity() - 1;
-		product.setQuantity(newQuantity);
-
-		if (product.getQuantity() == 0) {
-			System.out.println("The product is out of stock!");
-		} else if ((product instanceof Expirable)
-				&& (((FoodProduct) product).isExpirated())) {
-			System.out.println("The product is expirated!");
-		} else if (customer.getBalance() < product.getPrice()) {
-			System.out
-					.println("You do not have enough money to buy this product!");
-		} else if ((product.getAgeRestriction() == AgeRestriction.ADULT)
-				&& (customer.getAge() < 18)) {
-			System.out.println("You are too young to buy this product!");
-		} else {
-			System.out.println("Other!");
+	public static void ProcessPurchase(Customer customer, Product product)
+			throws ProductManagementException {
+		if (product instanceof FoodProduct) {
+			if (((FoodProduct) product).isExpired()) {
+				throw new ProductHasExpiredException();
+			}
 		}
+
+		if (product.getQuantity() < 1) {
+			throw new ProductOutOfStockException();
+		}
+
+		if (customer.getBalance() < product.getPrice()) {
+			throw new CustomerinsufficientBalanceException();
+		}
+
+		if (product.getAgeRestriction() == AgeRestriction.ADULT
+				&& customer.getAge() < 18) {
+			throw new CustomerNoPermissionToBuyException();
+		}
+
+		customer.setBalance(customer.getBalance() - product.getPrice());
+		product.setQuantity(product.getQuantity() - 1);
 	}
 }

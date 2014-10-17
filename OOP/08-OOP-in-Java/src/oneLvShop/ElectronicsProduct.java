@@ -28,6 +28,4 @@ public abstract class ElectronicsProduct extends Product {
 	public String toString() {
 		return super.toString() + "Guarantee period: " + this.guaranteePeriod;
 	}
-
-	protected abstract void isQuantityOver();
 }

@@ -2,7 +2,7 @@ package oneLvShop;
 
 public abstract class Product implements Buyable {
 	private String name;
-	private double price;
+	protected double price;
 	private int quantity;
 	private AgeRestriction ageRestriction;
 
@@ -56,6 +56,14 @@ public abstract class Product implements Buyable {
 
 	private void setAgeRestriction(AgeRestriction ageRestriction) {
 		this.ageRestriction = ageRestriction;
+	}
+
+	@Override
+	public String toString() {
+		return String
+				.format("Product name: %s; price %.2f; quantity: %d; age restriction: %s ",
+						this.name, this.price, this.quantity,
+						this.ageRestriction.toString());
 	}
 
 }
