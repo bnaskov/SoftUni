@@ -13,8 +13,8 @@ namespace FurnitureManufacturer.Models
         private decimal width;
         private decimal area;
 
-        public Table(string model, string material, decimal price, decimal height, decimal length, decimal width)
-            :base(model, material, price, height)
+        public Table(string model, MaterialType materialType, decimal price, decimal height, decimal length, decimal width)
+            : base(model, materialType, price, height)
         {
             this.Length = length;
             this.Width = width;
@@ -58,6 +58,13 @@ namespace FurnitureManufacturer.Models
         public decimal Area
         {
             get { return this.area; }
+        }
+
+        public override string ToString()
+        {
+            StringBuilder output = new StringBuilder(base.ToString());
+            output.AppendFormat(", Length: {0}, Width: {1}, Area: {2}", this.Length, this.Width, this.Area);
+            return output.ToString();
         }
     }
 }
