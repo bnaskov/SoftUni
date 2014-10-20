@@ -18,7 +18,7 @@ namespace FurnitureManufacturer.Models
         {
             this.Length = length;
             this.Width = width;
-            this.area = this.Height * this.Width;
+            this.area = this.Length * this.Width;
         }
 
         public decimal Length

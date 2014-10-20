@@ -65,7 +65,7 @@ namespace FurnitureManufacturer.Models
         public decimal Height
         {
             get { return this.height; }
-            private set
+            set
             {
                 if (value <= 0)
                 {

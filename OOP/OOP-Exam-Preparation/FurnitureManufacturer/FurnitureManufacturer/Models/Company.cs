@@ -13,6 +13,13 @@ namespace FurnitureManufacturer.Models
         private string registrationNumber;
         private ICollection<IFurniture> furnitures;
 
+        public Company(string name, string registrationNumber)
+        {
+            this.Name = name;
+            this.RegistrationNumber = registrationNumber;
+            this.furnitures = new List<IFurniture>();
+        }
+
         public string Name
         {
             get { return this.name; }
@@ -31,7 +38,6 @@ namespace FurnitureManufacturer.Models
                 this.name = value;
             }
         }
-
 
         public string RegistrationNumber
         {
@@ -63,7 +69,7 @@ namespace FurnitureManufacturer.Models
                 throw new ArgumentNullException("Furniture cannot be null.");
             }
 
-            this.Furnitures.Add(furniture);
+            this.furnitures.Add(furniture);
         }
 
         public void Remove(IFurniture furniture)
@@ -73,20 +79,21 @@ namespace FurnitureManufacturer.Models
                 throw new ArgumentNullException("Furniture cannot be null.");
             }
 
-            this.Furnitures.Remove(furniture);
+            this.furnitures.Remove(furniture);
         }
 
         public IFurniture Find(string model)
         {
-            foreach (var furniture in this.Furnitures)
-            {
-                if (furniture.Model.ToLower() == model.ToLower())
-                {
-                    return furniture;
-                }
-            }
+            return this.furnitures.FirstOrDefault(f => f.Model.ToLower() == model.ToLower());
+            //foreach (var furniture in this.Furnitures)
+            //{
+            //    if (furniture.Model.ToLower() == model.ToLower())
+            //    {
+            //        return furniture;
+            //    }
+            //}
 
-            return null;
+            //return null;
         }
 
         public string Catalog()
@@ -97,7 +104,7 @@ namespace FurnitureManufacturer.Models
                 this.Name,
                 this.RegistrationNumber,
                 this.Furnitures.Count != 0 ? this.Furnitures.Count.ToString() : "no",
-                this.Furnitures.Count == 1 ? "furniture" : "furnitures"));
+                this.Furnitures.Count != 1 ? "furnitures" : "furniture"));
 
             var sortedFurnitures = this.Furnitures.OrderBy(f => f.Price).ThenBy(f => f.Model);
             foreach (var furniture in sortedFurnitures)
@@ -106,6 +113,6 @@ namespace FurnitureManufacturer.Models
             }
 
             return output.ToString().Trim();
-        }
+        }        
     }
 }
