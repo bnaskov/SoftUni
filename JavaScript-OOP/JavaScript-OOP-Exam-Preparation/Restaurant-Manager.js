@@ -1,6 +1,15 @@
 function processRestaurantManagerCommands(commands) {
     'use strict';
 
+    var Types = {
+        Boolean: typeof true,
+        Number: typeof 0,
+        String: typeof "",
+        Object: typeof {},
+        Undefined: typeof undefined,
+        Function: typeof function () { }
+    };
+
     Object.prototype.extends = function (parent) {
     	if (!Object.create) {
     		Object.prototype.create = function (proto) {
@@ -11,12 +20,11 @@ function processRestaurantManagerCommands(commands) {
     	};
 
         this.prototype = Object.create(parent.prototype);
-        //Must have constructor
         this.prototype.constructor = this;
     }
 
     Object.prototype.isString = function () {
-    	return this instanceof String;
+    	return typeof(this) === Types.String;
     }
 
     // isEmpty function()
@@ -28,7 +36,7 @@ function processRestaurantManagerCommands(commands) {
         var _restaurants, _recipes;
         var globalConstants = {
         	UNIT_GRAMS: 'g',
-        	UNIT_MILLILITERS: 'ml';
+        	UNIT_MILLILITERS: 'ml'
         };
 
         function initialize() {
@@ -68,15 +76,84 @@ function processRestaurantManagerCommands(commands) {
             }
 
             Restaurant.prototype.addRecipe = function (recipe){
-            	// TODO
+            	if (!(recipe instanceof Recipe)) {
+            		throw new Error('Parameter should be instance of Recipe.');
+            	}
+
+            	this._recipes.push(recipe);
             }
 
             Restaurant.prototype.removeRecipe = function (recipe){
-            	// TODO
+            	if (!(recipe instanceof Recipe)) {
+            		throw new Error('Parameter should be instance of Recipe.');
+            	}
+
+            	var index = this._recipes.indexOf(recipe);
+            	this._recipes.splice(index, 1);
+            }
+
+            // Don't forget to call this
+            var formatRecipes = function (){
+            	var drinks, 
+            		salads, 
+            		mainCourses, 
+            		desserts;
+            	drinks = getRecipesByType.call(this, Drink);
+            	salads = getRecipesByType.call(this, Salad);
+            	mainCourses = getRecipesByType.call(this, MainCourse);
+            	desserts = getRecipesByType.call(this, Dessert);
+
+            	var result = '';
+            	if (drinks.length) {
+            		result += '~~~~~ DRINKS ~~~~~' + '\n';
+
+            		drinks.forEach(function (drink){
+            			result += drink.toString();
+            		});
+            	}
+
+            	if (salads.length) {
+            		result += '~~~~~ SALADS ~~~~~' + '\n';
+
+            		salads.forEach(function (salad){
+            			result += salad.toString();
+            		});
+            	}
+
+            	if (mainCourses.length) {
+            		result += '~~~~~ MAIN COURSES ~~~~~' + '\n';
+
+            		mainCourses.forEach(function (mainCourse){
+            			result += mainCourse.toString();
+            		});
+            	}
+
+            	if (desserts.length) {
+            		result += '~~~~~ DESSERTS ~~~~~' + '\n';
+
+            		desserts.forEach(function (dessert){
+            			result += dessert.toString();
+            		});
+            	}
+
+            	return result;
+            }
+
+            var getRecipesByType = function (type){
+            	return this._recipes.filter(function(recipe){
+            		return recipe instanceof type;
+            	});
             }
 
             Restaurant.prototype.printRestaurantMenu = function(){
-            	// TODO
+            	var result = '***** ' + this.getName() + ' - ' + this.getLocation() +' *****' + '\n';
+            	if (this._recipes.length <= 0) {
+            		result += 'No recipes... yet' +'\n';
+            	} else {
+            		result += formatRecipes.call(this);
+            	}
+
+            	return result;
             }
 
             return Restaurant;
@@ -139,7 +216,7 @@ function processRestaurantManagerCommands(commands) {
             Recipe.prototype.setQuantity = function (quantity){
             	if (quantity <= 0) {
             		throw new Error('The quantity must be positive.');
-            	};
+            	}
 
             	this._quantity = quantity;
             }
@@ -151,9 +228,21 @@ function processRestaurantManagerCommands(commands) {
             Recipe.prototype.setTime = function (time){
             	if (time <= 0) {
             		throw new Error('The time must be positive.');
-            	};
+            	}
 
             	this._time = time;
+            }
+
+            Recipe.prototype.getUnit = function (){
+            	return this._unit;
+            }
+
+            Recipe.prototype.toString = function (){
+            	var result = '==  ' + this.getName() + ' == $' + this.getPrice().toFixed(2) + '\n' +
+            	'Per serving: ' + this.getQuantity() + ' ' + this.getUnit() + ', ' + this.getCalories() + ' kcal' + '\n' +
+            	'Ready in ' + this.getTime() + ' minutes' + '\n';
+
+            	return result;
             }
 
             return Recipe;
@@ -171,8 +260,15 @@ function processRestaurantManagerCommands(commands) {
 
             Meal.extends(Recipe);
 
-            Meal.prototype.toggleVegan = function(){
+            Meal.prototype.toggleVegan = function (){
             	this._isVegan = !this._isVegan;
+            }
+
+            Meal.prototype.toString = function (){
+            	var result = this._isVegan ? '[VEGAN] ' : '';
+            	result += Recipe.prototype.toString.call(this);
+
+            	return result;
             }
 
             return Meal;
@@ -186,34 +282,67 @@ function processRestaurantManagerCommands(commands) {
 
             Drink.extends(Recipe);
 
+            Drink.prototype.setCalories = function (calories) {
+            	if (calories > 100) {
+            		throw new Error('Drink calories cannot be greater than 100.');
+            	};
+            	this._calories = calories;
+            }
+
+            Drink.prototype.setTime = function (time) {
+            	if (time > 20) {
+            		throw new Error('Time cannot be greater than 20.');
+            	};
+            	this._time = time;
+            }
+
+            Drink.prototype.toString = function (){
+            	var result = Recipe.prototype.toString.call(this);
+            	result += 'Carbonated: ' + (this._isCarbonated ? 'yes' : 'no') + '\n';
+            	return result;
+            }
+
             return Drink;
         }());
 
         var Salad = (function () {
             function Salad(name, price, calories, quantity, time, containsPasta){
-            	Meal.call(this, name, price, calories, quantity, time);
+            	Meal.call(this, name, price, calories, quantity, time, true);
             	this._containsPasta = containsPasta;
             }
 
             Salad.extends(Meal);
 
+            Salad.prototype.toString = function (){
+            	var result = Meal.prototype.toString.call(this);
+            	result += 'Contains pasta: ' + (this._containsPasta ? 'yes' : 'no') + '\n';
+            	return result;
+            }
+
             return Salad;
         }());
 
         var MainCourse = (function () {
-            function MainCourse(name, price, calories, quantity, time, type){
-            	Meal.call(this, name, price, calories, quantity, time);
+            function MainCourse(name, price, calories, quantity, time, isVegan,type){
+            	Meal.call(this, name, price, calories, quantity, time, isVegan);
             	this._type = type;
             }
 
             MainCourse.extends(Meal);
+
+
+            MainCourse.prototype.toString = function (){
+            	var result = Meal.prototype.toString.call(this);
+            	result += 'Type: ' + this._type + '\n';
+            	return result;
+            }
 
             return MainCourse;
         }());
 
         var Dessert = (function () {
             function Dessert(name, price, calories, quantity, time, isVegan){
-            	Meal.call(this, name, price, calories, quantity, tim, isVegan);
+            	Meal.call(this, name, price, calories, quantity, time, isVegan);
             	this._withSugar = true;
             }
 
@@ -221,6 +350,12 @@ function processRestaurantManagerCommands(commands) {
 
             Dessert.prototype.toggleSugar = function(){
             	this._withSugar = !this._withSugar;
+            }
+
+            Dessert.prototype.toString = function (){
+            	var result = this._withSugar ? '' : '[NO SUGAR] ';
+            	result += Meal.prototype.toString.call(this);
+            	return result;
             }
 
             return Dessert;
