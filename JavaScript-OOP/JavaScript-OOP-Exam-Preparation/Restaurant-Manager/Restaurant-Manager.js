@@ -274,6 +274,7 @@ function processRestaurantManagerCommands(commands) {
             return Meal;
         }());
 
+                        // (name, price, calories, quantity, timeToPrepare, isCarbonated)
         var Drink = (function () {
             function Drink(name, price, calories, quantity, time, isCarbonated){
             	Recipe.call(this, name, price, calories, quantity, time, globalConstants.UNIT_MILLILITERS);
