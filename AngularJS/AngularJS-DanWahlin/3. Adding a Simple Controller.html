@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+	<title></title>
+</head>
+<body>
+<div class="container" ng-controller="SimpleController">
+    <h3>Adding a Simple Controller</h3>
+    <ul>
+        <li ng-repeat="name in names">{{name}}</li>
+    </ul>
+</div>
+
+
+<script src="angular.js" type="text/javascript"></script>
+<script>
+	angular.module('myApp', []).controller('SimpleController', ['$scope', function($scope) {
+	   $scope.names = ['Dave', 'Napur', 'Heedy', 'Shriva'];
+	}]);
+</script>
+</body>
+</html>
+
+
+
+
