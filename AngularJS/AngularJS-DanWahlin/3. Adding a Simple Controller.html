@@ -7,16 +7,17 @@
 <div class="container" ng-controller="SimpleController">
     <h3>Adding a Simple Controller</h3>
     <ul>
-        <li ng-repeat="name in names">{{name}}</li>
+        <li ng-repeat="name in names | orderBy: name">{{ name }}</li>
     </ul>
 </div>
 
 
 <script src="angular.js" type="text/javascript"></script>
 <script>
-	angular.module('myApp', []).controller('SimpleController', ['$scope', function($scope) {
-	   $scope.names = ['Dave', 'Napur', 'Heedy', 'Shriva'];
-	}]);
+	var myApp = angular.module('myApp', []);
+	myApp.controller('SimpleController', function($scope){
+		$scope.names = ['Dave', 'Napur', 'Heedy', 'Shriva'];
+	});
 </script>
 </body>
 </html>
